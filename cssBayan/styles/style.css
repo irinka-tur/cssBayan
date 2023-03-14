@@ -3,7 +3,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
 }
 header{
     text-align: center;
@@ -34,7 +33,9 @@ header{
 .ac-container label {
     cursor: pointer;
     background-color: #dbe72f;
-    display: block;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
     padding: 15px 20px;
     width: 100%;
     color: #080808;
@@ -52,7 +53,7 @@ header{
     margin-top: -5px;
     color: #080808;
     padding: 20px 30px 10px;
-    transition-timing-function: ease-in-out;
+    transition:height 1s;
 }
 .ac-container input{
     display: none;
@@ -64,7 +65,6 @@ header{
     box-shadow: 0 8px 26px rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
 }
 .ac-container input:checked + label img {
-    float:right;
     transition: transform .35s;
     transform: rotate(45deg);    
 }
@@ -73,6 +73,7 @@ label img{
 }
 .ac-container:hover label img{
     display: block;
+    transition:height 1s;
 }
 .ac-container:hover label{
     color: blueviolet;
@@ -83,9 +84,6 @@ label img{
     color: #080808;
     padding: 20px 30px 10px;
     transition:height 0.5s;
-}
-.icon{
-    float:right;
 }
 footer{
     display: flex;
@@ -115,7 +113,7 @@ footer{
         font-size: 16px;
     }
     .ac-container .ac-body img{
-        max-width:300px;
+        max-width:50vw;
         height: auto;
     }
     footer{
@@ -133,7 +131,7 @@ footer{
         font-size: 10px;
     }
     .ac-container .ac-body img{
-        max-width:250px;
+        max-width:50vw;
         height: auto;
     }
     footer{
